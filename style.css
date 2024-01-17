@@ -17,7 +17,10 @@ a {
 
 :root {
     --default-blue: #0065FC;
-    --lighter-blue: #a0c4ff;
+    --light-blue: #a0c4ff;
+    --lighter-blue: #DEEBFF;
+
+    --dark-gray: #d9d9d9;
     --default-gray: #f2f2f2;
 }
 
@@ -72,7 +75,7 @@ body {
 }
 
 #subscribe-link:hover {
-    box-shadow: inset 0 0 0 3px #d2e3ff, inset 0 0 0 6px var(--lighter-blue), inset 0 0 0 9px var(--default-blue);
+    box-shadow: inset 0 0 0 3px var(--lighter-blue), inset 0 0 0 6px var(--lighter-blue), inset 0 0 0 9px var(--default-blue);
 }
 
 /* Main */
@@ -137,29 +140,89 @@ h1 {
 
 /* filter section */
 
-.filter-title {}
-
 .filters-container {
     display: flex;
+    align-items: center;
     margin-top: 2rem;
     flex-wrap: wrap;
 }
 
+.filter-button,
+.filter-title {
+    margin: 0 1rem 1rem 0;
+}
+
 .filter-button {
+    display: flex;
+    background: #fff;
+    margin-right: 1rem;
     border: 2px solid var(--default-gray);
     border-radius: 2rem;
 }
 
 .filter-button-icon {
-    border-radius: 100%;
+    display: grid;
+    place-content: center;
+    width: 3.25rem;
+    height: 3.25rem;
     background-color: var(--lighter-blue);
     color: var(--default-blue);
-    height: 100%;
+    border-radius: 100%;
+}
+
+.button-hover-animation {
+    animation: button-animation 0.75s;
+}
+
+@keyframes button-animation {
+    10% {
+        transform: translate(5px) rotate(0deg);
+    }
+
+    30% {
+        transform: translate(5px) rotate(30deg);
+    }
+
+    50% {
+        transform: translate(5px) rotate(-30deg);
+    }
+
+    70% {
+        transform: translate(5px) rotate(15deg);
+    }
+
+    90% {
+        transform: translate(5px) rotate(0deg);
+
+    }
+}
+
+.filter-button-icon-active {
+    order: 2;
+}
+
+.filter-button-active {
+    background-color: var(--default-gray);
 }
 
 .filter-button-text {
     font-weight: 700;
+    font-size: 1rem;
     padding: 1rem;
+}
+
+/* Infos */
+
+.info-icon {
+    height: 2rem;
+    width: 2rem;
+    border: solid 2px var(--dark-gray);
+    border-radius: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    color: var(--default-blue);
 }
 
 /* MEDIA QUERIES */
@@ -173,6 +236,11 @@ h1 {
 
     .nav-element:hover {
         border-bottom: 3px solid var(--default-blue);
+    }
+
+    /* Filter Section */
+    .filter-title {
+        width: 100%;
     }
 
 }
