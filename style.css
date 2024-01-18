@@ -75,7 +75,7 @@ body {
 }
 
 #subscribe-link:hover {
-    box-shadow: inset 0 0 0 3px var(--lighter-blue), inset 0 0 0 6px var(--lighter-blue), inset 0 0 0 9px var(--default-blue);
+    box-shadow: inset 0 0 0 3px var(--default-blue), inset 0 0 0 6px var(--light-blue), inset 0 0 0 9px var(--lighter-blue);
 }
 
 /* Main */
@@ -224,6 +224,124 @@ h1 {
     margin-right: 1rem;
     color: var(--default-blue);
 }
+
+/* Hostings Cards Section */
+
+/* General Settings */
+
+.hosting {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.hosting-most-popular, .hosting-results {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: var(--default-gray);
+    gap: 2rem;
+    margin-top: 2rem;
+    padding: 2rem;
+    border-radius: 1.5rem;
+}
+
+/* Popular Section Settings */
+
+.most-popular-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.popular-hosting-card {
+    display: flex;
+    background-color: #fff;
+    border-radius: 1.25rem;
+    box-shadow: 0 0 16px #0000002e;
+    cursor: pointer;
+    height: 12rem;
+}
+
+.popular-img-container {
+    position: relative;
+    display: grid;
+    place-content: center;
+    border-top-left-radius: 1.25rem;
+    border-bottom-left-radius: 1.25rem;
+    height: 100%;
+    width: 30%;
+    overflow: hidden;
+
+}
+
+.popular-img-container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 150%;
+    min-width: 100%;
+}
+
+.popular-card-detail {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.stars {
+    margin-top: auto;
+}
+
+.hostingMainCardGradeIcon[data-active="true"] {
+    color: var(--default-blue);
+}
+
+.hostingMainCardGradeIcon[data-active="false"] {
+    color: var(--dark-gray);
+}
+
+/* Hosting Results */
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+    gap: 2rem;
+}
+
+.result-hosting-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 1.25rem;
+    box-shadow: 0 0 16px #0000002e;
+    cursor: pointer;
+    height: 14rem;
+}
+
+.result-img-container {
+    position: relative;
+    border-top-left-radius: 1.25rem;
+    border-top-right-radius: 1.25rem;
+    height: 50%;
+    overflow: hidden;
+}
+
+.result-img-container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 250%;
+    min-width: 100%;
+}
+
+.result-card-detail {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    padding: 0.5rem;
+}
+
 
 /* MEDIA QUERIES */
 
