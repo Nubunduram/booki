@@ -1,3 +1,4 @@
+/* Default Setting & General Font */
 * {
     list-style: none;
     text-decoration: none;
@@ -5,6 +6,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
+    text-rendering: optimizeLegibility;
 }
 
 button,
@@ -12,10 +14,6 @@ a,
 .submit-search-text {
     cursor: pointer;
     color: inherit;
-}
-
-.underline-hover:hover {
-    text-decoration: underline;
 }
 
 :root {
@@ -31,6 +29,11 @@ a,
     --smaller-gap: 0.5rem;
     --small-gap: 1rem;
     --default-gap: 2rem
+}
+
+/* Special Class */
+.underline-hover:hover {
+    text-decoration: underline;
 }
 
 /* Header Nav Bar */
@@ -60,15 +63,30 @@ body {
     padding: var(--default-gap);
     text-align: center;
     font-weight: 500;
+    border-bottom: 3px solid var(--default-gray);
 }
 
 .nav-element:hover {
     color: var(--default-blue);
+    border-bottom: 3px solid var(--default-blue);
 }
 
-/* Main */
+/* Main & Section only under 768px */
 
 main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-section,
+.activities-section,
+.hosting-section {
+    width: 100%;
+}
+
+.activities-section,
+.search-section {
     max-width: 90%;
 }
 
@@ -136,6 +154,10 @@ h1 {
     margin: 0 var(--small-gap) var(--small-gap) 0;
 }
 
+.filter-title {
+    width: 100%;
+}
+
 .filter-button {
     display: flex;
     background: #fff;
@@ -196,16 +218,20 @@ h1 {
 }
 
 /* Infos */
+.info-p {
+    display: flex;
+    align-items: center;
+}
 
 .info-icon {
-    height: 2rem;
-    width: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 2rem;
+    min-height: 2rem;
+    margin-right: var(--smaller-gap);
     border: solid 2px var(--dark-gray);
     border-radius: 100%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: var(--small-gap);
     color: var(--default-blue);
 }
 
@@ -224,9 +250,12 @@ h1 {
     grid-template-columns: 1fr;
     background-color: var(--default-gray);
     gap: var(--default-gap);
-    margin-top: var(--default-gap);
     padding: var(--default-gap);
-    border-radius: 1.5rem;
+    margin-top: var(--default-gap);
+}
+
+.hosting-results {
+    background: none;
 }
 
 .popular-hosting-card,
@@ -274,6 +303,7 @@ h1 {
     border-radius: 1.25rem;
     box-shadow: 0 0 1rem 0 #0000002c;
     height: 10rem;
+    min-width: 175px;
 }
 
 .popular-img-container {
@@ -305,7 +335,7 @@ h1 {
 
 .results-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(285px, 100%), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(190px, 100%), 1fr));
     gap: var(--default-gap);
 }
 
@@ -354,7 +384,7 @@ h1 {
 .activities-grid {
     margin-top: var(--small-gap);
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(225px, 100%), 1fr));
     gap: var(--default-gap);
 }
 
@@ -445,27 +475,41 @@ footer {
     color: var(--default-blue);
 }
 
+
+
+
 /* MEDIA QUERIES */
 
-@media only screen and (max-width: 768px) {
-
-    /* Header Nav Bar */
-    .nav-element {
-        border-bottom: 3px solid var(--default-gray);
-    }
-
-    .nav-element:hover {
-        border-bottom: 3px solid var(--default-blue);
-    }
-
-    /* Filter Section */
-    .filter-title {
-        width: 100%;
-    }
-
-}
-
 @media only screen and (min-width: 768px) {
+
+    /* Main */
+
+    main {
+        display: block;
+        max-width: 90%;
+    }
+
+    .activities-section,
+    .search-section {
+        max-width: none;
+    }
+
+    .search-section,
+    .activities-section,
+    .hosting-section {
+        width: auto;
+    }
+
+    /* hosting popular & results */
+    .hosting-section {
+        flex-direction: column;
+    }
+
+    .hosting-most-popular,
+    .hosting-results {
+        border-radius: 1.5rem;
+        background-color: var(--default-gray);
+    }
 
 
     /* Header Nav Bar */
@@ -514,9 +558,18 @@ footer {
     .submit-search-text {
         display: inline;
     }
+
+    /* Shit */
+    .nav-element {
+        border: none;
+    }
+
+    .nav-element:hover {
+        border: none
+    }
 }
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1024px) {
 
     /* Hosting Results Section */
     .hosting-section {
@@ -604,5 +657,10 @@ footer {
 
     .footer-container {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Shit */
+    .filter-title {
+        width: auto;
     }
 }
