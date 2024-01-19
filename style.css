@@ -42,23 +42,17 @@ body {
 
 .body-header {
     display: grid;
-    align-items: center;
     width: 100%;
-    grid-template-areas:
-        "logo subscribe-link"
-        "nav-element nav-element";
 }
 
 .logo {
     place-self: center;
-    grid-area: logo;
     height: 4rem;
     padding: var(--smaller-gap) 0;
 }
 
 #nav-list {
     display: flex;
-    grid-area: nav-element;
 }
 
 .nav-element {
@@ -70,21 +64,6 @@ body {
 
 .nav-element:hover {
     color: var(--default-blue);
-}
-
-
-#subscribe-link {
-    text-align: center;
-    padding: var(--small-gap);
-    grid-area: subscribe-link;
-    color: var(--default-blue);
-    font-weight: 700;
-    transition: 1s ease;
-    border-radius: 50px;
-}
-
-#subscribe-link:hover {
-    box-shadow: inset 0 0 0 3px var(--default-blue), inset 0 0 0 6px var(--light-blue), inset 0 0 0 9px var(--lighter-blue);
 }
 
 /* Main */
@@ -131,7 +110,7 @@ h1 {
     width: 100%;
 }
 
-.search-form .submit-search {
+.submit-search {
     background-color: var(--default-blue);
     border: none;
     padding: 0 1.25rem;
@@ -375,7 +354,7 @@ h1 {
 .activities-grid {
     margin-top: var(--small-gap);
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(15rem, 100%), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
     gap: var(--default-gap);
 }
 
@@ -468,7 +447,7 @@ footer {
 
 /* MEDIA QUERIES */
 
-@media only screen and (max-width: 619px) {
+@media only screen and (max-width: 768px) {
 
     /* Header Nav Bar */
     .nav-element {
@@ -486,14 +465,14 @@ footer {
 
 }
 
-@media only screen and (min-width: 619px) {
+@media only screen and (min-width: 768px) {
 
 
     /* Header Nav Bar */
 
     .body-header {
-        grid-template-columns: auto 1fr auto auto;
-        grid-template-areas: "logo . nav-element nav-element subscribe-link";
+        display: flex;
+        justify-content: space-between;
         max-width: 90%;
     }
 
@@ -537,14 +516,32 @@ footer {
     }
 }
 
-@media only screen and (min-width: 1108px) {
+@media only screen and (min-width: 1440px) {
+
+    /* Hosting Results Section */
+    .hosting-section {
+        flex-direction: row;
+    }
+
+    .hosting-results {
+        width: 70%;
+    }
+
+    .results-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .hosting-most-popular {
+        width: 30%;
+        margin-left: var(--default-gap);
+    }
+
+    /* Activities Section */
 
     .activities-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
     }
-
-    /* Example styling for the items */
 
     .activity-card {
         width: 100%;
@@ -607,24 +604,5 @@ footer {
 
     .footer-container {
         grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media only screen and (min-width: 1440px) {
-    .hosting-section {
-        flex-direction: row;
-    }
-
-    .hosting-results {
-        width: 70%;
-    }
-
-    .results-grid {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    .hosting-most-popular {
-        width: 30%;
-        margin-left: var(--default-gap);
     }
 }
