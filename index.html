@@ -2,15 +2,24 @@
 <html lang="en">
 
 <head>
+    <!-- Meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore 'Booki' a fictional small business offering a vacation planning tool, showcasing my HTML development skills">
+    <meta name="author" content="Antoine Caron">
+    <!-- Title -->
     <title>Booki</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <!-- Logo in brower tab -->
+    <link rel="icon" href="/assets/b-booki-logo.png">
 </head>
 
 <body>
@@ -211,7 +220,8 @@
                         </a>
                     </article>
                 </div>
-                <p><a class="show-more-link" aria-label="Show more accommodation results" href="">Show more</a></p>
+                <p><a class="show-more-link underline-hover" aria-label="Show more accommodation results" href="">Show
+                        more</a></p>
             </div>
             <aside class="hosting-most-popular">
                 <header>
@@ -295,45 +305,83 @@
                 <h2>Activities in <span>Marseille</span></h2>
             </header>
             <div class="activities-grid">
-                <article class="activity-card">
-                    <div class="activity-img-container">
-                        <img src="/assets/old-port.jpg" alt="Image of the Old Port">
-                    </div>
-                    <h3>The old Port</h3>
-                </article>
-                <article class="activity-card">
-                    <div class="activity-img-container">
-                        <img src="/assets/pomegue-fort.jpg" alt="Image of the Fort of Pomegues">
-                    </div>
-                    <h3>Fort of Pomegues</h3>
-                </article>
-                <article class="activity-card">
-                    <div class="activity-img-container">
-                        <img src="/assets/frioul-islands.jpg" alt="Image of Frioul Islands">
-                    </div>
-                    <h3>Frioul Islands</h3>
-                </article>
-                <article class="activity-card">
-                    <div class="activity-img-container">
-                        <img src="/assets/calanques.jpg" alt="Image of the Calanques">
-                    </div>
-                    <h3>Calanques National Park</h3>
-                </article>
-                <article class="activity-card">
-                    <div class="activity-img-container">
-                        <img src="/assets/lady-of-guard.jpg" alt="View of the city on Our Lady of the Guard">
-                    </div>
-                    <h3>Our Lady of the Guard</h3>
-                </article>
-                <article class="activity-card">
-                    <div class="activity-img-container">
-                        <img src="/assets/longchamp-park.jpg" alt="Image of the Longchamp Park">
-                    </div>
-                    <h3>Longchamp Park</h3>
-                </article>
+                <a href=" " class="activity-card">
+                    <article class="activity-card-article long-card">
+                        <div class="activity-img-container long-card-img-container">
+                            <img src="/assets/old-port.jpg" alt="Image of the Old Port">
+                        </div>
+                        <h3>The old Port</h3>
+                    </article>
+                </a>
+                <a href=" " class="activity-card">
+                    <article class="activity-card-article medium-card">
+                        <div class="activity-img-container medium-card-img-container">
+                            <img src="/assets/pomegue-fort.jpg" alt="Image of the Fort of Pomegues">
+                        </div>
+                        <h3>Fort of Pomegues</h3>
+                    </article>
+                </a>
+                <a href=" " class="activity-card">
+                    <article class="activity-card-article small-card">
+                        <div class="activity-img-container small-card-img-container">
+                            <img src="/assets/frioul-islands.jpg" alt="Image of Frioul Islands">
+                        </div>
+                        <h3>Frioul Islands</h3>
+                    </article>
+                </a>
+                <a href="" class="activity-card">
+                    <article class="activity-card-article long-card">
+                        <div class="activity-img-container long-card-img-container">
+                            <img src="/assets/calanques.jpg" alt="Image of the Calanques">
+                        </div>
+                        <h3>Calanques National Park</h3>
+                    </article>
+                </a>
+                <a href="" class="activity-card">
+                    <article class="activity-card-article medium-card">
+                        <div class="activity-img-container medium-card-img-container">
+                            <img src="/assets/lady-of-guard.jpg" alt="View of the city on Our Lady of the Guard">
+                        </div>
+                        <h3>Our Lady of the Guard</h3>
+                    </article>
+                </a>
+                <a href="" class="activity-card">
+                    <article class="activity-card-article small-card">
+                        <div class="activity-img-container small-card-img-container">
+                            <img src="/assets/longchamp-park.jpg" alt="Image of the Longchamp Park">
+                        </div>
+                        <h3>Longchamp Park</h3>
+                    </article>
+                </a>
             </div>
         </section>
     </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-list">
+                <h3>About</h3>
+                <ul>
+                    <li class="footer-links underline-hover"><a href="">Site Operation</a></li>
+                    <li class="footer-links underline-hover"><a href="">Terms and Conditions of Sale</a></li>
+                    <li class="footer-links underline-hover"><a href="">Data and Privacy</a></li>
+                </ul>
+            </div>
+            <div class="footer-list">
+                <h3>Our Accommodations</h3>
+                <ul>
+                    <li class="footer-links underline-hover"><a href="">Quality Charter</a></li>
+                    <li class="footer-links underline-hover"><a href="">Submit Your Hotel</a></li>
+                </ul>
+            </div>
+            <div class="footer-list">
+                <h3>Assistance</h3>
+                <ul>
+                    <li class="footer-links underline-hover"><a href="">Help Center</a></li>
+                    <li class="footer-links underline-hover"><a href="">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 </body>
 <script src="https://kit.fontawesome.com/b9de2c5951.js" crossorigin="anonymous"></script>
 <script src="script.js"></script>
