@@ -17,18 +17,26 @@ a,
 }
 
 :root {
+    /* COLORS */
     --lighter-blue: #DEEBFF;
     --light-blue: #a0c4ff;
     --default-blue: #0065FC;
+
+    --default-white: #fff;
 
     --default-gray: #f2f2f2;
     --dark-gray: #d9d9d9;
 
     --black: #000;
 
+    /* GAP / MARGINS / PADDINGS */
     --smaller-gap: 0.5rem;
     --small-gap: 1rem;
-    --default-gap: 2rem
+    --default-gap: 2rem;
+
+    /* Border-Radius */
+    --default-radius: 1rem;
+    --round-radius: 100%;
 }
 
 /* Special Class */
@@ -107,7 +115,7 @@ h1 {
     display: flex;
     max-width: 400px;
     border: solid 1px var(--default-gray);
-    border-radius: 1rem;
+    border-radius: var(--default-radius);
 }
 
 .search-form * {
@@ -132,10 +140,10 @@ h1 {
 .submit-search {
     background-color: var(--default-blue);
     border: none;
-    padding: 0 1rem;
-    border-radius: 1rem;
+    padding: 0 var(--small-gap);
+    border-radius: var(--default-radius);
     box-shadow: 0rem 0rem 1rem 0.25rem var(--dark-gray);
-    color: #fff;
+    color: var(--default-white);
 }
 
 .submit-search-text {
@@ -162,7 +170,7 @@ h1 {
 
 .filter-button {
     display: flex;
-    background: #fff;
+    background: var(--default-white);
     margin-right: var(--small-gap);
     border: 2px solid var(--default-gray);
     border-radius: 2rem;
@@ -200,7 +208,7 @@ h1 {
     min-height: 2rem;
     margin-right: var(--smaller-gap);
     border: solid 2px var(--dark-gray);
-    border-radius: 100%;
+    border-radius: var(--round-radius);
     color: var(--default-blue);
 }
 
@@ -225,6 +233,11 @@ h1 {
 
 .hosting-results {
     background: none;
+}
+
+.popular-img-container,
+.result-img-container {
+    border: solid 0.25rem var(--default-white);
 }
 
 .popular-hosting-card,
@@ -268,8 +281,8 @@ h1 {
 
 .popular-hosting-card {
     display: flex;
-    background-color: #fff;
-    border-radius: 1.25rem;
+    background-color: var(--default-white);
+    border-radius: var(--default-radius);
     box-shadow: 0 0 1rem 0 #0000002c;
     height: 10rem;
     min-width: 175px;
@@ -279,8 +292,8 @@ h1 {
     position: relative;
     display: grid;
     place-content: center;
-    border-top-left-radius: 1.25rem;
-    border-bottom-left-radius: 1.25rem;
+    border-top-left-radius: var(--default-radius);
+    border-bottom-left-radius: var(--default-radius);
     height: 100%;
     width: 30%;
     overflow: hidden;
@@ -311,16 +324,16 @@ h1 {
 .result-hosting-card {
     display: flex;
     flex-direction: column;
-    background-color: #fff;
-    border-radius: 1.25rem;
+    background-color: var(--default-white);
+    border-radius: var(--default-radius);
     box-shadow: 0 0 1rem 0 #0000002c;
     height: 15rem;
 }
 
 .result-img-container {
     position: relative;
-    border-top-left-radius: 1.25rem;
-    border-top-right-radius: 1.25rem;
+    border-top-left-radius: var(--default-radius);
+    border-top-right-radius: var(--default-radius);
     height: 50%;
     overflow: hidden;
 }
@@ -357,8 +370,8 @@ h1 {
 }
 
 .activity-card {
-    background-color: #fff;
-    border-radius: 1.25rem;
+    background-color: var(--default-white);
+    border-radius: var(--default-radius);
     box-shadow: 0 0 1rem 0 #0000002c;
     height: 15rem;
 }
@@ -369,8 +382,8 @@ h1 {
 
 .activity-img-container {
     position: relative;
-    border-top-left-radius: 1.25rem;
-    border-top-right-radius: 1.25rem;
+    border-top-left-radius: var(--default-radius);
+    border-top-right-radius: var(--default-radius);
     height: 70%;
     overflow: hidden;
 }
@@ -475,7 +488,7 @@ footer {
 
     .hosting-most-popular,
     .hosting-results {
-        border-radius: 1.5rem;
+        border-radius: var(--default-radius);
         background-color: var(--default-gray);
     }
 
@@ -543,7 +556,7 @@ footer {
     }
 
     .submit-search {
-        border-radius: 0 1rem 1rem 0;
+        border-radius: 0 var(--default-radius) var(--default-radius) 0;
         box-shadow: none;
     }
 
@@ -569,8 +582,8 @@ footer {
 
     .activity-img-container {
         position: relative;
-        border-top-left-radius: 1.25rem;
-        border-top-right-radius: 1.25rem;
+        border-top-left-radius: var(--default-radius);
+        border-top-right-radius: var(--default-radius);
         height: 85%;
         overflow: hidden;
     }
