@@ -49,6 +49,8 @@ a,
 body {
     display: grid;
     place-items: center;
+    max-width: 1440px;
+    margin: auto;
 }
 
 .body-header {
@@ -249,7 +251,7 @@ h1 {
 .popular-hosting-card:hover,
 .result-hosting-card:hover,
 .activity-card:hover {
-    transform: scale(105%);
+    transform: scale(1.05);
     box-shadow: 0.5rem 0.5rem 1rem 0.25rem #0000002c;
 
 }
