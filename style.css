@@ -37,7 +37,52 @@ a,
     /* Border-Radius */
     --default-radius: 1rem;
     --round-radius: 100%;
+
+    /* font */
+    --small-font: 14px;
+    --default-font: 16px;
+    --bigger-font: 18px;
+    --title-font: 22px;
 }
+
+/* Font */
+* {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* font-weight */
+
+h1,
+h2,
+h3,
+.show-more-link,
+.filter-button-text {
+    font-weight: 700;
+}
+
+/* font-size */
+
+h1,
+h2 {
+    font-size: var(--title-font);
+}
+
+h3 {
+    font-size: var(--default-font);
+}
+
+.hotel-p {
+    font-size: var(--small-font);
+}
+
+.filter-title,
+.show-more-link,
+footer h3,
+#search-input {
+    font-size: var(--bigger-font);
+}
+
 
 /* Special Class */
 .underline-hover:hover {
@@ -60,19 +105,19 @@ body {
 
 .logo {
     place-self: center;
-    height: 4rem;
-    padding: var(--smaller-gap) 0;
+    margin: 30px;
+    width: 62px;
+    height: 19px;
 }
 
-#nav-list {
+nav {
     display: flex;
 }
 
 .nav-element {
     width: 100%;
-    padding: var(--default-gap) var(--small-gap);
+    padding: 0 var(--small-gap) 15px var(--small-gap);
     text-align: center;
-    font-weight: 500;
     border-bottom: 3px solid var(--default-gray);
 }
 
@@ -97,13 +142,12 @@ main {
 
 .activities-section,
 .search-section {
-    max-width: 90%;
+    max-width: 92%;
 }
 
 /* Search Section */
 
 h1 {
-    font-size: 2rem;
     margin-top: var(--default-gap);
 
 }
@@ -113,17 +157,11 @@ h1 {
 }
 
 .search-form {
-    margin-top: var(--small-gap);
+    margin-top: var(--default-gap);
     display: flex;
     max-width: 400px;
     border: solid 1px var(--default-gray);
     border-radius: var(--default-radius);
-}
-
-.search-form * {
-    font-weight: 600;
-    font-size: medium;
-
 }
 
 .location-dot-container {
@@ -155,41 +193,38 @@ h1 {
 /* filter section */
 
 .filters-container {
-    display: flex;
-    align-items: center;
     margin-top: var(--default-gap);
-    flex-wrap: wrap;
 }
 
-.filter-button,
-.filter-title {
-    margin: 0 var(--small-gap) var(--small-gap) 0;
+.filters {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: var(--smaller-gap);
+    row-gap: var(--small-gap);
 }
 
+
 .filter-title {
-    width: 100%;
+    margin-bottom: var(--small-gap);
 }
 
 .filter-button {
     display: flex;
+    align-items: center;
     background: var(--default-white);
-    margin-right: var(--small-gap);
+    height: 50px;
     border: 2px solid var(--default-gray);
     border-radius: 2rem;
+    padding: 0 var(--small-gap);
 }
 
 .filter-button-icon {
-    display: grid;
-    place-content: center;
-    width: 3.25rem;
-    height: 3.25rem;
     color: var(--default-blue);
+    margin-right: 10px;
 }
 
 .filter-button-text {
-    font-weight: 700;
-    font-size: 1rem;
-    padding: var(--small-gap) var(--small-gap) var(--small-gap) 0;
+    font-size: 14px;
 }
 
 .filter-button:hover {
@@ -200,18 +235,11 @@ h1 {
 .info-p {
     display: flex;
     align-items: center;
+    margin-top: var(--default-gap);
 }
 
 .info-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 2rem;
-    min-height: 2rem;
     margin-right: var(--smaller-gap);
-    border: solid 2px var(--dark-gray);
-    border-radius: var(--round-radius);
-    color: var(--default-blue);
 }
 
 /* Hostings Cards Section */
@@ -351,12 +379,7 @@ h1 {
     display: flex;
     flex-direction: column;
     height: 50%;
-    padding: var(--smaller-gap);
-}
-
-.show-more-link {
-    font-weight: bold;
-    padding: var(--smaller-gap);
+    padding: var(--small-gap);
 }
 
 /* Activities Section */
@@ -483,6 +506,12 @@ footer {
         width: auto;
     }
 
+    /* filter section */
+    /* changes the direction of the filters from a grid of 2 columns & 2 rows to a 1 row */
+    .filters {
+        display: flex;
+    }
+
     /* hosting popular & results */
     .hosting-section {
         flex-direction: column;
@@ -505,7 +534,7 @@ footer {
 
     nav {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         height: 100%;
     }
 
@@ -515,6 +544,7 @@ footer {
         display: grid;
         place-items: center;
         padding: var(--default-gap);
+        padding-top: var(--small-gap);
     }
 
     .nav-element:hover::before {
@@ -525,6 +555,10 @@ footer {
         width: 100%;
         height: 3px;
         background-color: var(--default-blue);
+    }
+
+    .logo {
+        margin-left: 0;
     }
 
     /* Activities Grid */
@@ -562,7 +596,6 @@ footer {
         box-shadow: none;
     }
 
-    /* Shit */
     .nav-element {
         border: none;
     }
@@ -573,6 +606,25 @@ footer {
 }
 
 @media only screen and (min-width: 1024px) {
+
+    /* Filter in Main section */
+    .filters-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .filters {
+        gap: 0;
+    }
+
+    .filter-title {
+        margin: 0;
+    }
+
+    .filter-button {
+        margin-left: 1rem;
+    }
+
 
     /* Activity Section */
 
