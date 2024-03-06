@@ -47,7 +47,7 @@ a,
 
 /* Font */
 * {
-    font-size: 16px;
+    font-size: var(--default-font);
     font-weight: 400;
 }
 
@@ -144,7 +144,7 @@ main {
 
 .activities-section,
 .search-section {
-    max-width: 90%;
+    max-width: 95%;
 }
 
 /* Search Section */
@@ -218,6 +218,7 @@ h1 {
     border: 2px solid var(--default-gray);
     border-radius: 2rem;
     padding: 0 var(--small-gap);
+    white-space: nowrap;
 }
 
 .filter-button-icon {
@@ -288,7 +289,6 @@ h1 {
 .activity-card:hover {
     transform: scale(1.05);
     box-shadow: 0.5rem 0.5rem 1rem 0.25rem #0000002c;
-
 }
 
 .stars {
@@ -494,9 +494,6 @@ footer {
 .footer-links a:focus-visible {
     color: var(--default-blue);
 }
-
-
-
 
 /* MEDIA QUERIES */
 
