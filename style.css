@@ -446,17 +446,11 @@ h1 {
 footer {
     width: 100%;
     background: var(--default-gray);
-    display: grid;
-    place-items: center;
     margin-top: var(--default-gap);
-}
-
-.footer-container {
-    width: 100%;
-    display: grid;
-    row-gap: 3rem;
-    grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
     padding: var(--default-gap);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
+    row-gap: 3rem;
 }
 
 .footer-list h3 {
@@ -687,17 +681,19 @@ footer {
     .results-grid {
         grid-template-columns: 1fr 1fr 1fr;
     }
+
     .popular-grid {
         grid-template-columns: none;
         gap: var(--small-gap);
     }
+
     .hosting-most-popular {
         margin-top: 0;
         width: 30%;
         margin-left: var(--default-gap);
     }
 
-    .footer-container {
+    footer {
         grid-template-columns: repeat(3, 1fr);
     }
 
