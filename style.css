@@ -243,6 +243,13 @@ h1 {
 
 .info-icon {
     margin-right: var(--smaller-gap);
+    display: grid;
+    place-content: center;
+    border: solid 1px var(--default-gray);
+    min-width: 24px;
+    min-height: 24px;
+    border-radius: var(--round-radius);
+    color: var(--default-blue);
 }
 
 /* Hostings Cards Section */
