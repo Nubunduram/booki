@@ -391,6 +391,10 @@ h1 {
     padding: var(--small-gap);
 }
 
+.show-more-link {
+    width: fit-content;
+}
+
 /* Activities Section */
 
 .activities-section {
