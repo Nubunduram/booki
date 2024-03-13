@@ -18,11 +18,10 @@ This project is developed with:
 
 ## 🔗 Installation
 
-Clone the repository
-
-There's actually 2 version, one english one with some modification that i made for fun (on main)
+There's actually 2 version, one in english with some modification that i made for fun (on main)
 and the original version that fits the Figma given for the project (branch official-version)
 
+Clone the repository
 ```sh
 git clone https://github.com/Nubunduram/booki.git
 ```
